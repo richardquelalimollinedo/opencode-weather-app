@@ -58,10 +58,13 @@ jobs:
         include:
           - os: ubuntu-latest
             asset: weather
+            target-name: weather-linux
           - os: windows-latest
             asset: weather.exe
+            target-name: weather-windows.exe
           - os: macos-latest
             asset: weather
+            target-name: weather-macos
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout (at release tag)
